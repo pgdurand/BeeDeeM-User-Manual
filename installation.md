@@ -10,6 +10,8 @@ By default, the _BeeDeeM_ installation procedure will pre-configure your system 
 
 We consider an installation on a Unix-based system \(Linux, MacOS X\), but you can easily adapt for Windows OS.
 
+_BeeDeeM_ is available on Github [here](https://github.com/pgdurand/BeeDeeM/releases).
+
 Open a ‘root’ session in a terminal window.
 
 Then proceed as follows:

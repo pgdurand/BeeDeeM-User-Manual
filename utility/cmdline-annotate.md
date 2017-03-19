@@ -55,7 +55,7 @@ In turn, such files can only be handled using:
 
 * [BLAST Viewer](https://github.com/pgdurand/BlastViewer) tool
 * [BLAST Filter](https://github.com/pgdurand/BLAST-Filter-Tool) Tool
-* Plealog Bioinformatics Core API: use [SerializerSystemFactory.getLoaderInstance\(NATIVE\_LOADER\)](https://github.com/pgdurand/Bioinformatics-Core-API/blob/master/src/bzh/plealog/bioinfo/io/searchresult/SerializerSystemFactory.java)
+* [Plealog Bioinformatics Core API](https://github.com/pgdurand/BeeDeeM/wiki/Explore-annotated-BLAST-results)
 
-The two former tools provide you with ready-to-use softwares to view and analyze annotated BLAST result files. The latter enables you to write your own Java-based tool to deal with such files in a convenient way.
+The two former tools provide you with ready-to-use softwares to view and analyze annotated BLAST result files. The latter enables you to write your own Java-based tool to deal with such files in a convenient way. [More here](https://github.com/pgdurand/BeeDeeM/wiki/Explore-annotated-BLAST-results).
 

@@ -1,5 +1,13 @@
 # Installation
 
+## Docker
+
+You can run _BeeDeeM_ within a Docker container, as explained in [this documentation](https://github.com/pgdurand/BeeDeeM/tree/master/docker). _Pros_ of Docker configuration: direct use. _Cons_ of Docker: you won't be able to use the [UiInstaller](/ui/getting-started.md).
+
+## Local / Server / Cluster
+
+You can install the software on your own computer \(or server, or cluster, ...\) to benefit from **ALL** its features, including the use of the [UiInstaller](/ui/getting-started.md). The following manual explains how to do that.
+
 The _BeeDeeM_ install procedure has to be executed by a system administrator.
 
 It only requires the file **beedeem-x.y.z-distrib.zip** \(where x.y.z is a version number\) which contains the entire _BeeDeeM_ system.
@@ -84,7 +92,7 @@ $ source envDBMS
 
 You have now to define:
 
-* the directories used by the *BeeDeeM* installer to correctly deploy it on your system \(_c.f._ [Directory structure](directory_structure.md)\),
+* the directories used by the _BeeDeeM_ installer to correctly deploy it on your system \(_c.f._ [Directory structure](directory_structure.md)\),
 * the _JRE_ home directory, 
 * the memory parameters to use with _JRE_.
 

@@ -38,4 +38,4 @@ BLAST results prepared using '-outfmt 5' argument (see command-line, above) are 
 
 ## Quickly locate BLAST banks
 
-Starting with *BeeDeeM* 4.0.1, you can use [info](/utility/list-banks.md) tool to get the list of BLAST banks. [Read more](/utility/list-banks.md).
+Starting with *BeeDeeM* 4.1.0, you can use [info](/utility/list-banks.md) tool to get the list of BLAST banks. [Read more](/utility/list-banks.md).

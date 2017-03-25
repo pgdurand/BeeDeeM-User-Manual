@@ -53,4 +53,5 @@
 * [Utility tools](utility/utils.md)
   * [Query databank repository](utility/cmdline-query.md)
   * [Annotate BLAST results](utility/cmdline-annotate.md)
+  * [List installed banks](utility/list-banks.md)
 * [Run BLAST search](utility/run-blast.md)

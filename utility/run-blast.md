@@ -35,3 +35,7 @@ In you have a nucleotide bank installed, look for file ending with **M.nal** ins
 ## View BLAST results
 
 BLAST results prepared using '-outfmt 5' argument (see command-line, above) are XML files that can be viewed with [BLAST Viewer](https://github.com/pgdurand/BlastViewer).
+
+## Quickly locate BLAST banks
+
+Starting with *BeeDeeM* 4.0.1, you can use [info](/utility/list-banks.md) tool to get the list of BLAST banks. [Read more](/utility/list-banks.md).

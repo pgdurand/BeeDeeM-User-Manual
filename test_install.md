@@ -30,6 +30,49 @@ Otherwise, it means the annotated _Human subdivision of Uniprot\_Swissprot_ is n
 
 ## Start working with BeeDeeM
 
+### List installed banks
+
+At any time, you can list installed banks as follows:
+
+```
+$ cd ${installDir}
+$ ./info.sh
+
+where - ${installDir} should be replaced by the directory where BeeDeeM 
+        is installed on your system 
+```
+
+Which gives you on the standard output:
+
+```
+BeeDeeM - 4.1.0
+
+Configuration:
+
+  Install path           : /opt/beedeem/
+  Master configuration   : /opt/conf/dbms.config
+  Log path               : /var/log/
+  Work path              : /tmp/
+  Bank configuration file: /biobase/dbmirror.config
+  Bank repository path   : /biobase/
+  Bank repository size   : 361,67 Mb
+
+Installed banks
+ - Protein banks: 1
+      * SwissProt_human
+        Description: Human subset of UniprotKB/SwissProt.
+        BLAST+ use: -db /biobase/p/SwissProt_human/current/SwissProt_human/SwissProt_humanM
+        Annotated bank: true
+        Size (sequences): 20,168
+        Size on disk: 361,67 Mb
+        Install date: 2017-03-12, 17:55
+  
+ - Nucleotide banks: 0
+
+ - Biological classification banks: 0
+```
+
+
 ### Install more databanks
 
 If the preceeding test was successful, you can continue to install some databanks:
@@ -77,7 +120,7 @@ $ blastp -db /biobase/p/SwissProt_human/current/SwissProt_human/SwissProt_humanM
 
 In turn, the BLAST result file \(1433S\_HUMAN.blastp\) can be viewed using the [BLAST Viewer software](https://github.com/pgdurand/BlastViewer).
 
-Read more about using BLAST with BeeDeeM-managed banks.
+[Read more](/utility/run-blast.md) about using BLAST with BeeDeeM-managed banks.
 
 ### Annotate a BLAST result
 
@@ -130,5 +173,5 @@ A 'zml' file is a dedicated zip-compressed XML format capable of representing wh
 
 You can analyze the content of '1433S\_HUMAN.zml' using the [BLAST Viewer software](https://github.com/pgdurand/BlastViewer) or by writing your own home-made tool using the [Bioinformatics Core API](https://github.com/pgdurand/Bioinformatics-Core-API).
 
-Read more about annotating BLAST results with BeeDeeM-managed banks.
+[Read more](/utility/cmdline-annotate.md) about annotating BLAST results with BeeDeeM-managed banks.
 

@@ -11,7 +11,8 @@ That tool is only available from the command line and is called:
 
 ## Requirements
 
-* BLAST searches have to be done against BLAST databanks prepared by *BeeDeeM*;
+* BLAST searches have to be done against BLAST databanks prepared by *BeeDeeM*; use the [info](/utility/list-banks.md) tool to list BLAST banks that also contains annotations;
+
 
 * use either legacy BLAST or BLAST+ software;
 
@@ -58,4 +59,8 @@ In turn, such files can only be handled using:
 * [Plealog Bioinformatics Core API](https://github.com/pgdurand/BeeDeeM/wiki/Explore-annotated-BLAST-results)
 
 The two former tools provide you with ready-to-use softwares to view and analyze annotated BLAST result files. The latter enables you to write your own Java-based tool to deal with such files in a convenient way. [More here](https://github.com/pgdurand/BeeDeeM/wiki/Explore-annotated-BLAST-results).
+
+## List annotated banks
+
+Use the [info](/utility/list-banks.md) tool to list banks that contains annotations.
 

@@ -70,4 +70,4 @@ In a same way, the above output displays that line:
 Annotated bank: true
 ```
 
-Which means that the "SwissProt_human" contains annotations: features and biological classifications. So, that bank can be used with the [Annotate tool](utility/cmd-annotate.md).
+Which means that the "SwissProt_human" contains annotations: features and biological classifications. So, that bank can be used with the [Annotate tool](/utility/cmd-annotate.md).

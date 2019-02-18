@@ -44,12 +44,12 @@ $ unzip beedeem-x.y.z-distrib.zip
 
 ```
 $ java -version
-java version "1.7.0_80"
-Java(TM) SE Runtime Environment (build 1.7.0_80-b15)
-Java HotSpot(TM) 64-Bit Server VM (build 24.80-b11, mixed mode)
+java version "1.8.0_45"
+Java(TM) SE Runtime Environment (build 1.8.0_45-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.45-b02, mixed mode)
 
-$ ant -version 
-Apache Ant(TM) version 1.9.6 compiled on June 29 2015
+$ ant -version
+Apache Ant(TM) version 1.10.3 compiled on March 24 2018
 ```
 
 If _Java_ and _Ant_ are already installed and available on your system, jump to step 5, below.
@@ -75,10 +75,10 @@ This information is given in the file **envDBMS** which you should edit and corr
 ```
 $ vi envDBMS     [update file as needed]
 
-#  Provide here the path to the home directory of an 
-#  Oracle JRE release 1.6 or above
+#  Provide here the path to the home directory of an
+#  Oracle JRE release 1.8 or above
 #
-JAVA_HOME=/usr/local/jre1.6      <-- UPDATE AT LEAST THIS LINE
+JAVA_HOME=/usr/local/jre1.8      <-- UPDATE AT LEAST THIS LINE
 .../...
 ```
 
@@ -93,7 +93,7 @@ $ source envDBMS
 You have now to define:
 
 * the directories used by the _BeeDeeM_ installer to correctly deploy it on your system \(_c.f._ [Directory structure](directory_structure.md)\),
-* the _JRE_ home directory, 
+* the _JRE_ home directory,
 * the memory parameters to use with _JRE_.
 
 To do that, edit the file **config.properties**. This contains documentation explaining how it should be modified.
@@ -129,6 +129,3 @@ Carefully check the final message from _Ant._ If everything is correct, you shou
 ```
  **BUILD SUCCESSFUL**
 ```
-
-
-

@@ -2,18 +2,20 @@
 
 ## Starting a process interactively
 
+### Using a global descriptor
+
 The processing must be started by a user so that *BeeDeeM* can access its various directories in read/write mode, particularly _${installDir}, ${workingDir}_ and _${biobaseDir}_.
 
 After opening a session \(via a terminal\), proceed as follows:
 
 ```
 $ cd ${installDir}
-$ ./CmdLineInstall.sh <DESC>
+$ ./install.sh <DESC>
 
-    where 
-      - ${installDir} is replaced by the directory where BeeDeeM is 
-        installed in on your system, and test is the name of the global 
-        descriptor (without its extension .gd) to be used. 
+    where
+      - ${installDir} is replaced by the directory where BeeDeeM is
+        installed in on your system, and test is the name of the global
+        descriptor (without its extension .gd) to be used.
       - <DESC> is a global descriptor file name without its '.gd' extension
 ```
 
@@ -21,12 +23,38 @@ Here is an example:
 
 ```
 $ cd ${installDir}
-$ ./CmdLineInstall.sh test
+$ ./install.sh test
 ```
 
 And there you go! This command starts a *BeeDeeM* bank installation process using file '*test.gd*' located in *${confDir}*.
 
 Refer to the section [Control of execution](#control-of-execution) for more information about *BeeDeeM* operation.
+
+### Using a single command-line
+
+You can use a single install command-line instead of using a global descriptor.
+
+Get help by entering this command:
+
+```
+$ cd ${installDir}
+$ ./install.sh -h
+```
+
+A simple command-line would be:
+
+```
+$ ./install.sh -h -desc swissprot -task download -fd 5000 -td 1000 -fr 3
+
+    where you can see all mandatory arguments:
+      -desc swissprot is a bank descriptor file name without its '.dsc' extension.
+        Such a file must be located in ${installDir}/conf/descriptors. Comma
+        separated list of descriptors is accepted, e.g. swissprot,PDB_protein.
+      -task download instructs BeeDeeM to download and install swissprot
+      -fd 5000 tells BeeDeeM to wait 5 seconds between consecutive FTP connections
+      -td 1000 tells BeeDeeM to wait 1 second between consecutive task executions
+      -fr 3 tells BeeDeeM to retry at most 3 times to connect to FTP server
+```
 
 ## Starting a deferred process
 
@@ -57,7 +85,7 @@ You can monitor the progress of *BeeDeeM* by consulting the file **dbms-XXX.log*
 This log file is backed up during *BeeDeeM* processing. The directory _${workingDir}_ might therefore contain a file kdms-XXX.log \(file currently being used\), and also the files kdms-XXX.logYYYYMMDD \(log file dating from YYYYMMDD; YYYY is the year, MM is the month and DD is the day\). When analysing *BeeDeeM* logs, you must therefore analyse all of the dbms.log files corresponding to a given process.
 
 ```
-Example: you start a process on 25/02/2017 which ends on 27/02/2017. 
+Example: you start a process on 25/02/2017 which ends on 27/02/2017.
 Then, you analyse the files:
     dbms-XXX.log, dbms-XXX.log20170226 and dbms-XXX.log20170225.
 ```

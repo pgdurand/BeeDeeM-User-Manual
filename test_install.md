@@ -11,7 +11,7 @@ $ ./install.sh swiss
 where - ${installDir} should be replaced by the directory where BeeDeeM 
         is installed on your system 
       - 'swiss' is the name of the global descriptor to use to start
-        bank installation (more on this later) 
+        bank installation (more on this later)
 ```
 
 _Note_: during script execution, there is nothing displayed on the terminal whether something goes 'ok' or 'wrong'. However, _BeeDeeM_ logs all its work in a dedicated log file located in _${workingDir}_.
@@ -39,7 +39,7 @@ $ cd ${installDir}
 $ ./info.sh
 
 where - ${installDir} should be replaced by the directory where BeeDeeM 
-        is installed on your system 
+        is installed on your system
 ```
 
 Which gives you on the standard output:
@@ -66,12 +66,11 @@ Installed banks
         Size (sequences): 20,168
         Size on disk: 361,67 Mb
         Install date: 2017-03-12, 17:55
-  
+
  - Nucleotide banks: 0
 
  - Biological classification banks: 0
 ```
-
 
 ### Install more databanks
 
@@ -88,7 +87,7 @@ For instance, one of these tools is '[query](/utility/cmdline-query.md)' which e
 
 ```
 $ cd ${installDir}
-$ ./query.sh protein 1433S_HUMAN txt
+$ ./query.sh -d protein -i 1433S_HUMAN -f txt
 ```
 
 ```
@@ -111,7 +110,7 @@ So, you can easily run BLAST jobs, as illustrated by this command-line snippet:
 
 ```
 # We get a query sequence from BeeDeeM repository
-$ ./query.sh protein 1433S_HUMAN fas > 1433S_HUMAN.fas
+$ ./query.sh -d protein -i 1433S_HUMAN -f fas > 1433S_HUMAN.fas
 
 # We "BLASTp" that query against the installed Human subdivision of Uniprot_Swissprot
 $ blastp -db /biobase/p/SwissProt_human/current/SwissProt_human/SwissProt_humanM \
@@ -134,7 +133,7 @@ Ok, try this on the command-line:
 
 ```
 $ cd ${installDir}
-$ ./query.sh protein 1433S_HUMAN txt
+$ ./query.sh -d protein -i 1433S_HUMAN -f txt
 ```
 
 Among the many types of information, that Swissprot entry contains:
@@ -164,7 +163,7 @@ Now, you can annotate a BLAST result as follows \(we resume the above example wh
 
 ```
 $ cd ${installDir}
-./annotate.sh 1433S_HUMAN.blastp 1433S_HUMAN.zml full
+./annotate.sh -i 1433S_HUMAN.blastp -o 1433S_HUMAN.zml -type full -writer zml
 ```
 
 _Note_: during script execution, there is nothing displayed on the terminal whether something goes wrong. However, _BeeDeeM_ logs all its work in a dedicated log file located in _${workingDir}_.

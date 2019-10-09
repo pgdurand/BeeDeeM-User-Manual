@@ -1,18 +1,17 @@
 # Annotate BLAST results
 
-*BeeDeeM* comes with an additional tool aims at annotating BLAST results. This annotation processing means to introduce features data within each HSP contained in a BLAST results. That information is, of course, retrieved from the databanks managed by *BeeDeeM*.
+_BeeDeeM_ comes with an additional tool aims at annotating BLAST results. This annotation processing means to introduce features data within each HSP contained in a BLAST results. That information is, of course, retrieved from the databanks managed by _BeeDeeM_.
 
 That tool is only available from the command line and is called:
 
 * annotate.sh: to be used on Linux or Mac OSX system
 * annotate.bat: to be used on Windows system
 
-*Note:* during script execution, there is nothing displayed on the terminal whether something goes OK or wrong. However, *BeeDeeM* logs all its work in a dedicated log file located in ${workingDir}. Refer to [Directory structure](/directory_structure.md) for more information.
+_Note:_ during script execution, there is nothing displayed on the terminal whether something goes OK or wrong. However, _BeeDeeM_ logs all its work in a dedicated log file located in ${workingDir}. Refer to [Directory structure](/directory_structure.md) for more information.
 
 ## Requirements
 
-* BLAST searches have to be done against BLAST databanks prepared by *BeeDeeM*; use the [info](/utility/list-banks.md) tool to list BLAST banks that also contains annotations;
-
+* BLAST searches have to be done against BLAST databanks prepared by _BeeDeeM_; use the [info](/utility/list-banks.md) tool to list BLAST banks that also contains annotations;
 
 * use either legacy BLAST or BLAST+ software;
 
@@ -22,23 +21,28 @@ That tool is only available from the command line and is called:
 
 A legacy NCBI XML BLAST file is the result file you create when using the following argument of BLAST+:
 
-    -outfmt 5 
+```
+-outfmt 5 
+```
 
-For those of you that are still using the legacy BLAST (_i.e. blastall_), use this argument:
+For those of you that are still using the legacy BLAST \(_i.e. blastall_\), use this argument:
 
-    -m 7
-
-
+```
+-m 7
+```
 
 ## Command-line use
 
 Command line takes three arguments, in this order:
 
-    <BLAST result> <output file> <type>
+```
+-i <BLAST result> -o <output file> -type <type> -writer <writer>
+```
 
 * **BLAST result** \[_required_\]: input BLAST file that has to be annotated \(absolute path\); must be legacy BLAST XML formatted; 
 * **output file** \[_required_\]: output file that will contain the annotated BLAST result \(absolute path\); 
 * **type** \[_required_\]: type of annotation to retrieve. Use one of: bco or full. Use "bco" to only retrieve biological classifications information. Use "full" to retrieve full feature tables.
+* **writer** \[_required_\]: writing format. Use one of: xml or zml. Use zml to save feactures and classification data. Use xml to save using NCBI legacy XML format.
 
 [Sample use case](/test_install.md#annotate-a-blast-result).
 

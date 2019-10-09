@@ -7,18 +7,20 @@ That tool is only available from the command line and is called:
 * query.sh: to be used on Linux or Mac OSX system
 * query.bat: to be used on Windows system
 
-*Note:* during script execution, there is nothing displayed on the terminal whether something goes OK or wrong. However, *BeeDeeM* logs all its work in a dedicated log file located in ${workingDir}. Refer to [Directory structure](/directory_structure.md) for more information.
+_Note:_ during script execution, there is nothing displayed on the terminal whether something goes OK or wrong. However, _BeeDeeM_ logs all its work in a dedicated log file located in ${workingDir}. Refer to [Directory structure](/directory_structure.md) for more information.
 
 ## Command-line use
 
 Command line takes three arguments, in this order:
 
-    <database> <seq_id> <format>
+```
+query.sh -d <database> -i <seq_id> -f <format>
+```
 
 and the result is directly dumped in standard output.
 
 * **database** \[_required_\]: use either "dico", "nucleotide" or "protein";
-* **seq_id** \[_required_\]: an entity ID;
+* **seq\_id** \[_required_\]: an entity ID;
 * **format** \[_required_\]: use either "txt" \(default\), "html", "insd", "fas" or "finsd".
 
 [Sample use case](/test_install.md#query-the-beedeem-bank-repository).

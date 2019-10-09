@@ -19,9 +19,9 @@ _Note:_ during script execution, there is nothing displayed on the terminal whet
 Command line takes no arguments. Simply use:
 
 ```
-./info.sh  [on Linux/OSX]
+./info.sh -d all [on Linux/OSX]
 or
-info.bat  [on Windows]
+info.bat -d all [on Windows]
 ```
 
 The result is directly dumped in standard output, such as:
@@ -60,7 +60,7 @@ The 'info' command accepts the following optional arguments:
 -d <type-of-repository> -f <format> -u <username>
 ```
 
-where: 
+where:
 
 * "type-of-repository" is one of: n, p, b, all. This allows you to list nucleotide, protein, biological calssifications or all banks, respectively. Default is: all.
 

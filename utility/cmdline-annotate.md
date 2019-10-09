@@ -22,7 +22,7 @@ _Note:_ during script execution, there is nothing displayed on the terminal whet
 A legacy NCBI XML BLAST file is the result file you create when using the following argument of BLAST+:
 
 ```
--outfmt 5 
+-outfmt 5
 ```
 
 For those of you that are still using the legacy BLAST \(_i.e. blastall_\), use this argument:
@@ -36,13 +36,15 @@ For those of you that are still using the legacy BLAST \(_i.e. blastall_\), use 
 Command line takes three arguments, in this order:
 
 ```
--i <BLAST result> -o <output file> -type <type> -writer <writer>
+annotate.sh -i <BLAST result> -o <output file> -type <type> -writer <writer>
 ```
 
 * **BLAST result** \[_required_\]: input BLAST file that has to be annotated \(absolute path\); must be legacy BLAST XML formatted; 
 * **output file** \[_required_\]: output file that will contain the annotated BLAST result \(absolute path\); 
 * **type** \[_required_\]: type of annotation to retrieve. Use one of: bco or full. Use "bco" to only retrieve biological classifications information. Use "full" to retrieve full feature tables.
 * **writer** \[_required_\]: writing format. Use one of: xml or zml. Use zml to save feactures and classification data. Use xml to save using NCBI legacy XML format.
+
+Run program "annotate.sh" without any arguments to review command-line usage.
 
 [Sample use case](/test_install.md#annotate-a-blast-result).
 

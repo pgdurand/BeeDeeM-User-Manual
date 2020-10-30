@@ -1,8 +1,13 @@
 # Installation
 
-## Docker
+## Docker/Singularity
 
-You can run _BeeDeeM_ within a Docker container, as explained in [this documentation](https://github.com/pgdurand/BeeDeeM/tree/master/docker). _Pros_ of Docker configuration: direct use. _Cons_ of Docker: you won't be able to use the [UiInstaller](../getting-started-1/).
+You can run _BeeDeeM_ within a Docker or Singularity container, as explained in:
+
+* [this documentation](https://github.com/pgdurand/BeeDeeM/tree/master/docker) for _Docker_
+* [this documentation](https://github.com/pgdurand/BeeDeeM/blob/master/singularity/beedeem.def) for _Singularity_
+
+_Pros_ of Docker/Singularity configuration: direct use. _Cons_ of Docker/Singularity: you won't be able to use the [UiInstaller](../getting-started-1/). _Pros_ of Singularity over Docker config: we use a different design and enable the use of an external conf directory.
 
 ## Local / Server / Cluster
 

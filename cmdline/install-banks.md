@@ -13,9 +13,8 @@ $ cd ${installDir}
 $ ./install.sh <DESC>
 
     where
-      - ${installDir} is replaced by the directory where BeeDeeM is
-        installed in on your system, and test is the name of the global
-        descriptor (without its extension .gd) to be used.
+      - ${installDir}: replace by the directory where BeeDeeM is
+        installed on your system.
       - <DESC> is a global descriptor file name without its '.gd' extension
 ```
 

@@ -1,10 +1,10 @@
-# _BeeDeeM_: the Bioinformatics Databank Manager System
+# Introduction
 
 ## Presentation
 
 The Bioinformatics Databank Manager System \(called _BeeDeeM_\) is capable of installing on a local computing system major sequence databank file formats: **Genbank, Refseq, Embl, Genpept, Swissprot, TrEmbl, Fasta, Silva** and **BOLD**. In addition to sequence data files, _BeeDeeM_ can install major biological classifications \(ontologies\), such as **NCBI Taxonomy, Gene Ontology, Enzyme Commission and Intepro** **domains**. Plain text as well as compressed \(gzip\) and archived \(tar\) files are accepted by _BeeDeeM_.
 
-Whatever the source of sequence files \(public institutes or personal data\), _BeeDeeM_ converts them into \(a\) BLAST databanks and \(b\) sequence data indexes. Then, all these databanks are available for use with several ready-to-use softwares and Java API \(see [Companion tools](#companion-tools), below\).
+Whatever the source of sequence files \(public institutes or personal data\), _BeeDeeM_ converts them into \(a\) BLAST databanks and \(b\) sequence data indexes. Then, all these databanks are available for use with several ready-to-use softwares and Java API \(see [Companion tools](./#companion-tools), below\).
 
 The **conversion of sequence files into a BLAST databank** is done in a fully automated way by _BeeDeeM_. While NCBI 'makeblastdb' only handles Fasta files, _BeeDeeM_ is capable of converting directly Genbank, Refseq, Embl, Genpept, Swissprot, TrEmbl, Silva and BOLD files into a BLAST databank.
 
@@ -26,15 +26,14 @@ _BeeDeeM_ automatically performs:
 * the preparation of taxonomic subsets out of annotated sequence banks,
 * the filtering of sequence banks with user-defined constraints.
 
-
 ## Main tools
 
 _BeeDeeM_ provides a toolchain made of:
 
-* [a command-line tool to automate databanks installation](cmdline/getting-started.md)
-* [a UI front-end to do the same in a more friendly way](ui/getting-started.md)
-* [a command-line tool to annotate BLAST results](utility/cmdline-annotate.md)
-* [a command-line to query databanks using sequence IDs](utility/cmdline-query.md)
+* [a command-line tool to automate databanks installation](getting-started/)
+* [a UI front-end to do the same in a more friendly way](getting-started-1/)
+* [a command-line tool to annotate BLAST results](utils/cmdline-annotate.md)
+* [a command-line to query databanks using sequence IDs](utils/cmdline-query.md)
 
 ## Practical use cases
 
@@ -57,7 +56,7 @@ This manual explains how to install, configure and use _BeeDeeM_.
 
 ## License
 
-_**BeeDeeM**_** is a free open-source software** released under the terms of:
+_**BeeDeeM**_ **is a free open-source software** released under the terms of:
 
-[![License AGPL](https://img.shields.io/badge/license-Affero GPL 3.0-blue.svg)](https://www.gnu.org/licenses/agpl-3.0.txt)
+[![License AGPL](https://img.shields.io/badge/license-Affero%20GPL%203.0-blue.svg)](https://www.gnu.org/licenses/agpl-3.0.txt)
 

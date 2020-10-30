@@ -85,10 +85,13 @@ Each of these two fields have to be filled in with available system tasks. The f
 | _idxsw_ | taxinc,taxexc | create the sequence annotation index for a Uniprot file \(1\) |
 | _idxfas_ | n/a | create the sequence annotation index for a Fasta file |
 | _idxdico_ | type,file | create the data index for a the biological classification file \(2\) |
+| script | name,path | execute an external script \(3\).  |
 
 _\(1\)_ Arguments 'taxinc' and 'taxexc' are optional and can be used to prepare taxonomic specific databanks. More on this in the section called “Preparing a taxonomic specific data subset”.
 
 _\(2\)_ Argument 'type' is mandatory and specifies the biological classification type. Accepted value for this arguement is one of: tax \(NCBI Taxonomic Classification\), ipr \(Interpro term dictionary\), pfam \(Pfam term dictionary\), go \(Gene Ontology term dictionary\), ecc and ecd \(Enzyme Classification\). Argument 'file' is optional and specifies the file name to index.
+
+\(3\) name and path arguments are mandatory. Default script location is 'conf/scripts'. An external script aims at executing any type of tasks that are not already available in standard BeeDeeM tasks. You can review an example of using an external task by looking at script sample 'hello\_world.sh' \(located in 'conf/scripts'\), along with 'PDB\_proteins\_task.dsc' file \(located in 'conf/descriptors'\). When providing scripts within standard loication \('conf/scripts'\), only provide script file name as value for argument 'path' of 'script' task. Otherwise, use full path.
 
 ## Global tasks
 
@@ -97,9 +100,10 @@ _\(2\)_ Argument 'type' is mandatory and specifies the biological classification
 | _delgz_ | n/a | delete gzip files |
 | _deltar_ | n/a | delete Unix TAR file |
 | _deltmpidx_ | n/a | delete working directories and/or files created during an indexing task |
-| _formatdb_ | lclid, check, nr, taxinc, taxexc, volsize, silva, taxonomy | invoke the NCBI's _formatdb/makeblastdb_ tool to create a BLAST databank from a set of FASTA sequence files \(3\) |
+| _formatdb_ | lclid, check, nr, taxinc, taxexc, volsize, silva, taxonomy | invoke the NCBI's _formatdb/makeblastdb_ tool to create a BLAST databank from a set of FASTA sequence files \(4\) |
+| script | name,path | execute an external script \(provide same feature as 'script' task on unit task\) |
 
-\(3\) More on this in the section “Tuning BLAST databank maker”, below.
+\(4\) More on this in the section “Tuning BLAST databank maker”, below.
 
 ## Databank descriptor samples
 
@@ -113,6 +117,7 @@ For example, if you want to see how to install \(1\) protein set of sequences av
 | _Yersinia\_all\_but\_Angola\_prot_ | show how to install all Yersinia pestis proteomes, excluding Angola, from GenBank/Genomes Directory \(Blast bank only\) |
 | _Arabidopsis\_thaliana\_prot_ | show how to install the Arabidopsis thaliana proteome from GenBank/Genomes Directory \(Blast bank only\) |
 | _SwissProt\_human_ | how to create a Human subset of UniprotKB/SwissProt: sequence annotations + Blast banks |
+| PDB\_proteins\_task | how to call an external task; use of 'script' task |
 
 ## Tuning BLAST databank maker
 

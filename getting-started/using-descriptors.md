@@ -99,7 +99,7 @@ resume.date=none
 
 The first line is a comma separated list of database descriptors to use \(without their ".dsc" extension\). It defines which databank\(s\) will be installed during a single _BeeDeeM_ processing.
 
-The second line gives a restart date. This line is only used in the case of a restart after a failure. If you start _BeeDeeM_ for the first time or if you are updating the databases, it is absolutely imperative to set "resume.date" to the value _none_. All of this is explained in section [Advanced uses](advanced-uses/).
+The second line gives a restart date. This line is only used in the case of a restart after a failure. If you start _BeeDeeM_ for the first time or if you are updating the databases, it is absolutely imperative to set "resume.date" to the value _none_. All of this is explained in section [Advanced uses](advanced-uses.md).
 
 **But now, let's see how to install a databank using these descriptors!**
 

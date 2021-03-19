@@ -1,2 +1,0 @@
-# Processing a new database
-

@@ -2,7 +2,7 @@
 
 ## Restart after failure
 
-When processing fails, no sequence database being processed is put into production and the databases currently in production are not modified. Once the problem has been identified and resolved \(_c.f._ [Control of execution](../install-banks.md#control-of-execution)\), _BeeDeeM_ can be restarted as follows.
+When processing fails, no sequence database being processed is put into production and the databases currently in production are not modified. Once the problem has been identified and resolved \(_c.f._ [Control of execution](install-banks.md#control-of-execution)\), _BeeDeeM_ can be restarted as follows.
 
 Go to the directory _${conf}_, and edit the global descriptor file that you used to start the processing \(_e.g._ default.gd\). Locate the line containing 'resume.date' and replace 'none' with the date you started the process that failed.
 

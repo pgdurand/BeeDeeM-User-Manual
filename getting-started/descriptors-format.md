@@ -171,7 +171,7 @@ mail.smtp.recipient.mail=
 
 **\(2\)** The main task to execute. Must be one of the two following keys: 'info' or 'download'. Use 'info' to just retrieve the list of files to download/process. Use 'download' to actually donwload/process files. When using 'info', the list of files \(along with their size\) is dumpped in the log file of the software.
 
-**\(3\)** Resume a previously aborted process. To do that, replace 'none' by the process date using the format yyyymmdd \(ex: 20071027\). See [Restart after failure](advanced-uses/#restart-after-failure) for more information.
+**\(3\)** Resume a previously aborted process. To do that, replace 'none' by the process date using the format yyyymmdd \(ex: 20071027\). See [Restart after failure](advanced-uses.md#restart-after-failure) for more information.
 
 **\(4\)** Delay \(ms\) between two consecutive task executions. Please follow recommendations of databank providers \(_e.g._ NCBI, EBI\).
 

@@ -4,7 +4,7 @@
 
 ### Using a global descriptor
 
-The processing must be started by a user so that _BeeDeeM_ can access its various directories in read/write mode, particularly _${installDir}, ${workingDir}_ and _${biobaseDir}_.
+This is the original way of using BeeDeeM to install a bank. The processing must be started by a user so that _BeeDeeM_ can access its various directories in read/write mode, particularly _${installDir}, ${workingDir}_ and _${biobaseDir}_.
 
 After opening a session \(via a terminal\), proceed as follows:
 
@@ -32,7 +32,7 @@ Refer to the section [Control of execution](./#control-of-execution) for more in
 
 ### Using a single command-line
 
-You can use a single install command-line instead of using a global descriptor.
+Instead of using a global descriptor, it is possible to start BeeDeeM bank installation in a more direct way: all parameters usually provided using a global descriptor \(a file\) can be passed in directly to a command-line.
 
 Get help by entering this command:
 
@@ -44,17 +44,37 @@ $ ./install.sh -h
 A simple command-line would be:
 
 ```text
-$ ./install.sh -h -desc swissprot -task download -fd 5000 -td 1000 -fr 3
+$ ./install.sh -h -desc swissprot -task download 
 
     where you can see all mandatory arguments:
       -desc swissprot is a bank descriptor file name without its '.dsc' extension.
         Such a file must be located in ${installDir}/conf/descriptors. Comma
         separated list of descriptors is accepted, e.g. swissprot,PDB_protein.
       -task download instructs BeeDeeM to download and install swissprot
-      -fd 5000 tells BeeDeeM to wait 5 seconds between consecutive FTP connections
-      -td 1000 tells BeeDeeM to wait 1 second between consecutive task executions
-      -fr 3 tells BeeDeeM to retry at most 3 times to connect to FTP server
+      
 ```
+
+In addition to command-line arguments, it is possible to change default settings of BeeDeeM using environment variables, as follows: 
+
+| Variable name | Value | Use |
+| :--- | :--- | :--- |
+| KL\_DEBUG | true, false | Set on/off DEBUG mode of BeeDeeM. Default is false. |
+| KL\_WORKING\_DIR | An absolute path | If not set, log and working directories are set to java.io.tmp |
+| KL\_CONF\_DIR | An absolute path | Absolute path to a home-made "conf" directory. If not set, use ${installDir}/conf |
+| KL\_LOG\_TYPE | none, console, file | Set logging system. Choose between 'none' \(silent mode of BeeDeeM\), 'console' or 'file' \(default\). |
+| KL\_LOG\_FILE | File name | When using KL\_LOG\_TYPE=file, set the file name. |
+
+How to set such an environment variable? For instance, if you want to set KL\_LOG\_TYPE to none, do this on a bash shell \(Linux\):
+
+```text
+export KL_LOG_TYPE=none
+./install.sh .../...
+```
+
+Finally, it is possible to override settings from "${installDir}/conf/dbms.config" configuration file directly using "java -D arguments" or by setting a standard environment variable. For that purpose, prefix "dbmf.config" property key with "KL\_"_._ For instance, if you want to override default "mirror.path" value, use either:
+
+*  `java ... -DKL_mirror.path="/a/path"` in the Java command starting BeeDeeM bank installation;
+* `export KL_mirror.path="/a/path"` on a Linux bash shell before calling BeeDeeM bank installation tool \(install.sh\).
 
 ## Starting a deferred process
 

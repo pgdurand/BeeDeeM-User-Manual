@@ -1,2 +1,0 @@
-# Tuning BLAST databank maker
-

@@ -53,7 +53,7 @@ history=0
 
 The use of such a file will be explained in the next section.
 
-The full format of the database descriptors is documented in section [Databank descriptor format](descriptors-format/).
+The full format of the database descriptors is documented in section [Databank descriptor format](descriptors-format.md).
 
 ## Description of processing to be performed: the global descriptor
 

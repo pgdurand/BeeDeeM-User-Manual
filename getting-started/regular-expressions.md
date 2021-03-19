@@ -1,6 +1,6 @@
 # Appendix - Regular expressions
 
-[Databank descriptors](descriptors-format/) \(".dsc" files\) accept regular expressions in their "db.files.include" and "db.files.exlude" directives.
+[Databank descriptors](descriptors-format.md) \(".dsc" files\) accept regular expressions in their "db.files.include" and "db.files.exlude" directives.
 
 Here is a short documentation about the accepted expressions.
 

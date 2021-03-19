@@ -28,5 +28,5 @@ As soon as you have set which directories to scan, you have to set which files t
 
 Finally, you have to instruct the Databank Manager what to do with the downloaded data files. For example, sequence data files \(Genbank, Uniprot, etc.\) are available as compressed files. To be used by Korilog Databank Manager System to run BLAST search jobs, they have to be uncompressed, then converted to Fasta files and finally transformed to a Blast databank using the NCBI's 'formatdb' utility.
 
-This is the purpose of the two fields [Unit tasks](../getting-started/descriptors-format/#unit-tasks) and [Global tasks](../getting-started/descriptors-format/#global-tasks) to let you specify what to do on each file \(unit task\) and on all files alltogether \(global task\). Each of these two fields have to be filled in with available system tasks.
+This is the purpose of the two fields [Unit tasks](../getting-started/descriptors-format.md#unit-tasks) and [Global tasks](../getting-started/descriptors-format.md#global-tasks) to let you specify what to do on each file \(unit task\) and on all files alltogether \(global task\). Each of these two fields have to be filled in with available system tasks.
 

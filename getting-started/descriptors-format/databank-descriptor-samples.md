@@ -1,2 +1,0 @@
-# Databank descriptor samples
-

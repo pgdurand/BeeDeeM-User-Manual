@@ -104,7 +104,7 @@ and
 ${mirrordir}/p/PDB_proteins/20170226/PDB_proteins
 ```
 
-In this case, you should consult the _BeeDeeM_ log files and search for the lines containing "WARN" \(refer to [Control of execution](install-banks/#control-of-execution) for more details\).
+In this case, you should consult the _BeeDeeM_ log files and search for the lines containing "WARN" \(refer to [Control of execution](install-banks.md#control-of-execution) for more details\).
 
 Each such "WARN" line contains the description of an error that occurred during processing. Once the problem has been identified, _BeeDeeM_ can be restarted: see section [Restart after failure](advanced-uses/#restart-after-failure).
 

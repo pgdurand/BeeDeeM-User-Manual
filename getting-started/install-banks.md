@@ -28,7 +28,7 @@ $ ./install.sh test
 
 And there you go! This command starts a _BeeDeeM_ bank installation process using file '_test.gd_' located in _${confDir}_.
 
-Refer to the section [Control of execution](./#control-of-execution) for more information about _BeeDeeM_ operation.
+Refer to the section [Control of execution](install-banks.md#control-of-execution) for more information about _BeeDeeM_ operation.
 
 ### Using a single command-line
 
@@ -118,7 +118,7 @@ If the processing was successful, you will see the following line at the end of 
 INFO | Processing ok.
 ```
 
-This message indicates that the sequence databases were successfully installed on your system and your users now have access to the new versions of these banks. For more details, refer to the section [What to do after processing](../banks-organization.md#what-to-do-after-processing).
+This message indicates that the sequence databases were successfully installed on your system and your users now have access to the new versions of these banks. For more details, refer to the section [What to do after processing](banks-organization.md#what-to-do-after-processing).
 
 If the processing failed, the following line will appear at the end of the log:
 
@@ -126,7 +126,7 @@ If the processing failed, the following line will appear at the end of the log:
 WARN | Processing failed. Check WARN messages.
 ```
 
-In this case, no sequence databases have been installed in production and your users will continue to use the database versions currently in production. For more details, refer to the section [What to do after processing](../banks-organization.md#what-to-do-after-processing).
+In this case, no sequence databases have been installed in production and your users will continue to use the database versions currently in production. For more details, refer to the section [What to do after processing](banks-organization.md#what-to-do-after-processing).
 
 ## BeeDeeM is running?
 

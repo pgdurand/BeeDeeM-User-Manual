@@ -4,7 +4,7 @@
 
 Within the Databanks Sources panel, select the tab called Public Databanks. There, you can see a list of pre-configured databank descriptors.
 
-![Local Image](../../.gitbook/assets/dbms_dblist.png)
+![Local Image](../.gitbook/assets/dbms_dblist.png)
 
 Each descriptor contains the relevant information enabling the software to install a particular databank: location of the remote server and the list of files to retrieve. You will see later on how to edit and add a new databank descriptor.
 
@@ -12,7 +12,7 @@ Usually, a databank descriptor relating to sequence databanks \(Genbank, Swisspr
 
 Not only a databank descriptor provides the material to install a databank, it can also be used to get some information before the installation: availability of the remote server, number of files to download, size of the data to download and an estimation of the databank size on your disk storage after installation.
 
-If you want to install a particular databank, or if you want to get its information without installing it, simply select the corresponding descriptor in the list, and click on the ![Local Image](../../.gitbook/assets/dbinstall.png) button. The Databank Manager will ask you if you want ot see the databank information before its installation: answer \[Yes\]. After a short period of time, during which the Databank Manager queries the remote server, a dialogue box will appear to display the databank information. Click on the \[Cancel\] button to close the dialogue box if you do not want to start the install. On the other hand, if you click on the \[Install\] button, the Databank Manager will provide you with the Installation Scheduler dialogue box. Use it to set up when you want to install the databank and click on the \[Ok\] button.
+If you want to install a particular databank, or if you want to get its information without installing it, simply select the corresponding descriptor in the list, and click on the ![Local Image](../.gitbook/assets/dbinstall.png) button. The Databank Manager will ask you if you want ot see the databank information before its installation: answer \[Yes\]. After a short period of time, during which the Databank Manager queries the remote server, a dialogue box will appear to display the databank information. Click on the \[Cancel\] button to close the dialogue box if you do not want to start the install. On the other hand, if you click on the \[Install\] button, the Databank Manager will provide you with the Installation Scheduler dialogue box. Use it to set up when you want to install the databank and click on the \[Ok\] button.
 
 It is worth noting that Korilog Databank Manager System has to be up and running when a databank installation has been scheduled. Otherwise, the task will not be executed.
 
@@ -36,7 +36,7 @@ One of the major features of the software is its capability to introduce biologi
 
 So, you have to install the above mentioned classifications and annotated reference sequence databanks before any attempt to produce KLAST results containing biological classification data.
 
-![Local Image](../../.gitbook/assets/dbms_bc.png)
+![Local Image](../.gitbook/assets/dbms_bc.png)
 
 ## Install personal databanks
 
@@ -52,7 +52,7 @@ When you provide sequence files to Korilog Databank Manager System, you should v
 
 Here is an example of the installation of COI DNA barcoding data sets. Source files have been manually retrieved from the BOLD data server \([http://www.boldsystems.org/index.php/datarelease](http://www.boldsystems.org/index.php/datarelease)\), then KLAST Databank Manager has been setup as follows:
 
-![Local Image](../../.gitbook/assets/dbms_perso.png)
+![Local Image](../.gitbook/assets/dbms_perso.png)
 
 It is worth noting that you have first to install the NCBI Taxonomy classification before installing taxonomy-based sequence data sets \(Silva and BOLD\).
 
@@ -63,15 +63,15 @@ The Personal Databanks panel contains some controls to filter sequences. These c
 * sequence description
 * taxonomy; filtering sequences using taxonomy data is only possible if the source files contained such information. In all cases, using taxonomy filters required to install the NCBI Taxonomy classification.
 
-![Local Image](../../.gitbook/assets/dbms_filter_taxonomy.png)
+![Local Image](../.gitbook/assets/dbms_filter_taxonomy.png)
 
 You can find a taxon ID using the "Find Tax Id" button. Just fill in the Search for field with a taxonomy term, an approximate term or a regular expression. In this example, even if we are looking for Homo spaiens, the taxonomic engine will return Homo sapiens:
 
-![Local Image](../../.gitbook/assets/dbms_find_taxonomic_id.png)
+![Local Image](../.gitbook/assets/dbms_find_taxonomic_id.png)
 
 In addition to filtering, you can rename all the sequences IDs and/or descriptions using the "Rename" tab.
 
-![Local Image](../../.gitbook/assets/dbms_rename_sequences.png)
+![Local Image](../.gitbook/assets/dbms_rename_sequences.png)
 
 Since the full installation of a databank may take a long time, you can use the \[Test filtering\] button just to check whether or not your filter fulfill your needs. Testing a filter does not install a databank.
 
@@ -79,7 +79,7 @@ Since the full installation of a databank may take a long time, you can use the 
 
 To install a subset of an installed databank, select the databank of interest and clic on the \[Install a subset\] button located at the bottom of "Installed databank" panel. The Personnal Databank panel is shown and automatically filled in with the original files selected databank. You can now filter these files according to your needs. In the following example, a subset of the installed Refseq\_protein databank has been filtered to keep only sequences which concerns kinase:
 
-![Local Image](../../.gitbook/assets/dbms_install_subset.png)
+![Local Image](../.gitbook/assets/dbms_install_subset.png)
 
 ## Prepare taxonomic specific data subsets
 

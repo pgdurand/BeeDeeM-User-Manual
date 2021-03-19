@@ -1,6 +1,6 @@
 # Filter sequences
 
-When using indexing tasks \(idxem, idxsw, idxgb, idxgp or idxfas; see [Unit tasks](../descriptors-format.md#unit-tasks)\), specific parameters are available to retain or discard sequences from source files.
+When using indexing tasks \(idxem, idxsw, idxgb, idxgp or idxfas; see [Unit tasks](descriptors-format.md#unit-tasks)\), specific parameters are available to retain or discard sequences from source files.
 
 Theses parameters allow:
 

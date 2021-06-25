@@ -9,6 +9,25 @@ That tool is only available from the command line and is called:
 
 _Note:_ during script execution, there is nothing displayed on the terminal whether something goes OK or wrong. However, _BeeDeeM_ logs all its work in a dedicated log file located in ${workingDir}. Refer to [Directory structure](../installation/directory_structure.md) for more information.
 
+## Annotation explained
+
+"Annotating" a BLAST results means adding to the XML BLAST result files two types of information:
+
+* Ontology data, such as Gene Ontology, Enzyme, InterPro, PFAM or NCBI Taxonomy IDs and descriptions
+* Feature tables located on matching regions
+
+First of all, you have to undertsand that during the installation of a bank, either a sequence one \(e.g. SwissProt\) or an ontology one \(e.g. GO\), BeeDeeM prepares data into dedicated indexes as illustrated here:
+
+![](../.gitbook/assets/beedeem-indexer.png)
+
+Then, you have to understand that a BLAST XML file produced by BLAST or PLAST or Diamond vs a BLAST bank prepared by BeeDeeM, contains Hits IDs and Ontology IDs. BeeDeeM annotator will be capable of using all these IDs to gather very useful data from sequence and ontology banks installed by BeeDeeM, too.
+
+Finally, you have two know that BeeDeeM provides two types of "annotation" processing: **BCO** or **Full**, as illustrated here:
+
+![](../.gitbook/assets/beedeem-bco-annotator.png)
+
+![](../.gitbook/assets/beedeem-full-annotator.png)
+
 ## Requirements
 
 * BLAST searches have to be done against BLAST databanks prepared by _BeeDeeM_; use the [info](list-banks.md) tool to list BLAST banks that also contains annotations;

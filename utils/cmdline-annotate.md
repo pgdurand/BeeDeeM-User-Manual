@@ -24,7 +24,7 @@ First of all, you have to understand that during the installation of a bank, eit
 
 Then, you have to understand that a BLAST XML file produced from a BLAST bank prepared by BeeDeeM contains both Hits IDs **and** Ontology IDs. BeeDeeM annotator will be capable of using all these IDs to gather very useful data from sequence and ontology banks installed by BeeDeeM, too.
 
-Finally, you have two know that BeeDeeM provides two types of "annotation" processing: **BCO** or **Full**, as illustrated here:
+Finally, you have to know that BeeDeeM provides two types of "annotation" processing: **BCO** or **Full**, as illustrated here:
 
 ![](../.gitbook/assets/beedeem-bco-annotator.png)
 

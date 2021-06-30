@@ -1,6 +1,6 @@
 # Annotate BLAST results
 
-_BeeDeeM_ comes with an additional tool aims at annotating BLAST results. This annotation processing means to introduce features data within each HSP contained in a BLAST results. That information is, of course, retrieved from the databanks managed by _BeeDeeM_.
+_BeeDeeM_ comes with an additional tool aims at annotating BLAST results. This annotation processing means to introduce features data within each HSP contained in a BLAST result. That information is, of course, retrieved from the databanks managed by _BeeDeeM_.
 
 That tool is only available from the command line and is called:
 
@@ -11,14 +11,14 @@ _Note:_ during script execution, there is nothing displayed on the terminal whet
 
 ## Annotation explained
 
-"Annotating" a BLAST results means adding two types of information to the XML BLAST result files :
+"Annotating" a BLAST result means adding two types of information to the XML BLAST result files :
 
 * Ontology data, namely IDs and descriptions from Gene Ontology, Enzyme, InterPro, PFAM or NCBI Taxonomy, if any are available in the reference bank;
 * Feature tables located on matching regions of hits.
 
 **How all of these can happen?**
 
-First of all, you have to undertsand that during the installation of a bank, either a sequence one \(e.g. SwissProt\) or an ontology one \(e.g. Gene Ontology\), BeeDeeM prepares data into dedicated indexes as illustrated here:
+First of all, you have to understand that during the installation of a bank, either a sequence one \(e.g. SwissProt\) or an ontology one \(e.g. Gene Ontology\), BeeDeeM prepares data into dedicated indexes as illustrated here:
 
 ![](../.gitbook/assets/beedeem-indexer.png)
 

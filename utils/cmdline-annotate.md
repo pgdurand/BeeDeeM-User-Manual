@@ -11,16 +11,18 @@ _Note:_ during script execution, there is nothing displayed on the terminal whet
 
 ## Annotation explained
 
-"Annotating" a BLAST results means adding to the XML BLAST result files two types of information:
+"Annotating" a BLAST results means adding two types of information to the XML BLAST result files :
 
-* Ontology data, such as Gene Ontology, Enzyme, InterPro, PFAM or NCBI Taxonomy IDs and descriptions
-* Feature tables located on matching regions
+* Ontology data, namely IDs and descriptions from Gene Ontology, Enzyme, InterPro, PFAM or NCBI Taxonomy, if any are available in the reference bank;
+* Feature tables located on matching regions of hits.
 
-First of all, you have to undertsand that during the installation of a bank, either a sequence one \(e.g. SwissProt\) or an ontology one \(e.g. GO\), BeeDeeM prepares data into dedicated indexes as illustrated here:
+**How all of these can happen?**
+
+First of all, you have to undertsand that during the installation of a bank, either a sequence one \(e.g. SwissProt\) or an ontology one \(e.g. Gene Ontology\), BeeDeeM prepares data into dedicated indexes as illustrated here:
 
 ![](../.gitbook/assets/beedeem-indexer.png)
 
-Then, you have to understand that a BLAST XML file produced by BLAST or PLAST or Diamond vs a BLAST bank prepared by BeeDeeM, contains Hits IDs and Ontology IDs. BeeDeeM annotator will be capable of using all these IDs to gather very useful data from sequence and ontology banks installed by BeeDeeM, too.
+Then, you have to understand that a BLAST XML file produced from a BLAST bank prepared by BeeDeeM contains both Hits IDs **and** Ontology IDs. BeeDeeM annotator will be capable of using all these IDs to gather very useful data from sequence and ontology banks installed by BeeDeeM, too.
 
 Finally, you have two know that BeeDeeM provides two types of "annotation" processing: **BCO** or **Full**, as illustrated here:
 
@@ -28,15 +30,15 @@ Finally, you have two know that BeeDeeM provides two types of "annotation" proce
 
 ![](../.gitbook/assets/beedeem-full-annotator.png)
 
-## Requirements
+## Requirements to use BeeDeeM Annotator
 
 * BLAST searches have to be done against BLAST databanks prepared by _BeeDeeM_; use the [info](list-banks.md) tool to list BLAST banks that also contains annotations;
 * use either legacy BLAST or BLAST+ software;
-* set BLAST program to produce results formatted as legacy XML.
+* set BLAST program to produce results formatted as XML \(legacy or XML2\).
 
-## What is a legacy BLAST XML result file?
+## How to produce a BLAST XML result file?
 
-A legacy NCBI XML BLAST file is the result file you create when using the following argument of BLAST+:
+For instance, you can produce a legacy NCBI XML BLAST file using the following argument of BLAST+:
 
 ```text
 -outfmt 5

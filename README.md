@@ -2,29 +2,43 @@
 
 ## Presentation
 
-The Bioinformatics Databank Manager System (called _BeeDeeM_) is capable of installing on a local computing system major sequence databank file formats: **Genbank, Refseq, Embl, Genpept, Swissprot, TrEmbl, Fasta, Silva** and **BOLD**. In addition to sequence data files, _BeeDeeM_ can install major biological classifications (ontologies), such as **NCBI Taxonomy, Gene Ontology, Enzyme Commission and Intepro** **domains**. Plain text as well as compressed (gzip) and archived (tar) files are accepted by _BeeDeeM_.
+BeeDeeM is a general-purpose Bioinformatics Databank Manager.&#x20;
 
-Whatever the source of sequence files (public institutes or personal data), _BeeDeeM_ converts them into (a) BLAST databanks and (b) sequence data indexes. Then, all these databanks are available for use with several ready-to-use softwares and Java API (see [Companion tools](./#companion-tools), below).
+It is capable of installing sequence databanks, such as: Genbank, Refseq, Embl, Genpept, Swissprot, TrEmbl, Fasta and Silva, as well as any files using these formats. In addition, BeeDeeM can install major biological classifications (ontologies), such as NCBI Taxonomy, Gene Ontology, Enzyme and Intepro.&#x20;
 
-The **conversion of sequence files into a BLAST databank** is done in a fully automated way by _BeeDeeM_. While NCBI 'makeblastdb' only handles Fasta files, _BeeDeeM_ is capable of converting directly Genbank, Refseq, Embl, Genpept, Swissprot, TrEmbl, Silva and BOLD files into a BLAST databank.
+BeeDeeM can be used from the command-line or from a graphical user interface. It is cluster ready: use of a job scheduler (e.g. PBS, SLURM), smooth use of cluster structures (e.g. data downloading from Internet-connected nodes vs. data processing on network-isolated nodes).&#x20;
 
-Sequence data indexes are used in various places of the software to **retrieve sequence annotations given sequence identifiers**. To achieve such a data retrieval task in a very effective way, the source sequence files have to come with a dictionary associating sequence identifiers to sequence data. Again, the Databank Manager is capable of creating such a dictionary automatically, whatever the format of the source sequence files.
+The software comes with utility tools such as databank filtering and querying, and BLAST/DIAMOND/PLAST annotator tools; banks installed by BeeDeeM being indexed, they can be used to collect features data (including ontologies) and add all that information within results of above mentioned sequence comparison tools.
 
-Finally, concerning public sequence databanks, **the Databank Manager is capable of running in a fully automated way the retrieval of sequence files from the FTP servers of public institutes** (such as NCBI, EBI, Uniprot, GeneOntology, _etc._), as well as from your own in-house FTP servers if any are available.
+## Data processing engine
+
+Whatever the source of sequence files (public institutes or personal data), _BeeDeeM_ converts them into (a) BLAST databanks and (b) sequence data indexes. Then, all these databanks are available for use with several ready-to-use softwares and Java API (see [Companion tools](./#companion-tools)).
+
+The conversion of sequence files into a BLAST databank is done in a fully automated way by _BeeDeeM_. While NCBI 'makeblastdb' only handles Fasta files, _BeeDeeM_ is capable of converting directly Genbank, Refseq, Embl, Genpept, Swissprot, TrEmbl and Silva files into a BLAST databank in avery straightforward way.
+
+Sequence data indexes are used in various places of the software to retrieve sequence annotations given sequence identifiers. To achieve such a data retrieval task in a very effective way, the source sequence files have to come with a dictionary associating sequence identifiers to sequence data. Again, the Databank Manager is capable of creating such a dictionary automatically, whatever the format of the source sequence files.
+
+Finally, concerning public sequence databanks, the Databank Manager is capable of running in a fully automated way the retrieval of sequence files from the FTP servers of public institutes (such as NCBI, EBI, Uniprot, GeneOntology, _etc._), as well as from your own in-house FTP servers if any are available.
 
 ## Main features
 
 _BeeDeeM_ automatically performs:
 
-* the download of the database files from remote sites (via FTP),
+* the download of the database files from remote sites (via FTP or Aspera),
 * the decompression of the files (gzip files),
 * the un-archiving of the files (tar files),
 * the conversion of native sequence banks (e.g. Genbank) to FASTA files,
 * the preparation of databases in BLAST format from native sequence bank formats,
-* the indexing of Genbank, Refseq, Embl, Genpept, Swissprot, TrEmbl, Fasta, Silva and BOLD files allowing their efficient querying by way of sequence identifiers,
+* the indexing of Genbank, Refseq, Embl, Genpept, Swissprot, TrEmbl, Fasta and Silva files allowing their efficient querying by way of sequence identifiers,
 * the indexing of sequence features and ontologies data (NCBI Taxonomy, Gene Ontology, Enzyme Commission and Intepro domains),
 * the preparation of taxonomic subsets out of annotated sequence banks,
 * the filtering of sequence banks with user-defined constraints.
+
+_Task execution extension:_
+
+* Any kind of pre- and post-processing of data can be done using external scripts
+* Such scripts can be executed on the host computer (local mode) or though SGE, PBS or SLURM scheduler (cluster mode)
+* Task executions are controlled by configuration files; _e.g._ to specify software ressources (RAM, CPU, walltime), access to softwares (direct execution or through Conda), _etc._&#x20;
 
 ## Main tools
 

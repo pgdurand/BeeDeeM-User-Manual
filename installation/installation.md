@@ -2,25 +2,34 @@
 
 ## Legacy vs modern installations
 
-BeeDeeM software development started in early February 2007. To provide an open source and free software installer, the [Apache Ant tool ](https://ant.apache.org/)was chosen to setup a multi-OS installer. This is called the legacy BeeDeeM installer.&#x20;
+BeeDeeM software development started in early February 2007. To provide a multi-OS, open source and free software installer at that time, the [Apache Ant tool ](https://ant.apache.org/)was chosen. This is called the _legacy BeeDeeM installer_.&#x20;
 
 Over time, modern installation procedures were provided relying on Docker, Singularity and Conda. Today, these are the recommanded ways of installing BeeDeeM.
 
 ## Docker
 
-You can run _BeeDeeM_ within a Docker container, as explained in [this documentation](https://github.com/pgdurand/BeeDeeM/tree/master/docker). _Pros_ of Docker configuration: direct use. _Cons_ of Docker: you won't be able to use the [UiInstaller](../getting-started-1/).
+You can run _BeeDeeM_ within a Docker container, as explained in [this documentation](https://github.com/pgdurand/BeeDeeM/tree/master/docker).&#x20;
+
+* _Pros_ of Docker configuration: direct use.&#x20;
+* _Cons_ of Docker:&#x20;
+  * not always easy to use on particular clusters,&#x20;
+  * benefit from all BeeDeeM features, but the [UiInstaller](../getting-started-1/).&#x20;
 
 ## Singularity
 
-You can run _BeeDeeM_ within a Singularity container, as explained in [this documentation](https://github.com/pgdurand/BeeDeeM/blob/master/singularity/beedeem.def). Pros and cons are same as Docker.
+You can run _BeeDeeM_ within a Singularity container, as explained in [this documentation](https://github.com/pgdurand/BeeDeeM/blob/master/singularity/beedeem.def).&#x20;
+
+* _Pros_ of Singularity configuration: direct use.&#x20;
+* _Cons_ of Singularity:&#x20;
+  * benefit from all BeeDeeM features, but the [UiInstaller](../getting-started-1/).&#x20;
 
 ## Conda
 
-You can install and run BeeDeeM using Anaconda tool as explained in [this documentation](https://anaconda.org/SeBiMER/beedeem).
+Finally, you can install and run BeeDeeM using Anaconda tool as explained in [this documentation](https://anaconda.org/SeBiMER/beedeem). You can benefit from all BeeDeeM features, including the [UiInstaller](../getting-started-1/).&#x20;
 
 ## Legacy installation
 
-While not anymore recommanded, you can install the software directly on your own computer (or server, or cluster, ...) to benefit from **ALL** its features, including the use of the [UiInstaller](../getting-started-1/). The following section explains how to do that.
+While not anymore recommanded, you can still install the software directly on your own computer (or server, or cluster, ...) to benefit from **ALL** its features, including the use of the [UiInstaller](../getting-started-1/). The following section explains how to do that.
 
 The _BeeDeeM_ install procedure has to be executed by a system administrator.
 
@@ -33,8 +42,6 @@ By default, the _BeeDeeM_ installation procedure will pre-configure your system 
 We consider an installation on a Unix-based system (Linux, macOS), but you can easily adapt for Windows OS.
 
 _BeeDeeM_ is available on Github [here](https://github.com/pgdurand/BeeDeeM/releases).
-
-Open a ‘root’ session in a terminal window.
 
 Then proceed as follows:
 

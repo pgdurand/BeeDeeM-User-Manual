@@ -5,7 +5,7 @@
   * [Requirements](installation/requirements.md)
   * [Directory structure](installation/directory\_structure.md)
   * [Installation](installation/installation.md)
-  * [Test a bank installation](installation/test\_install/README.md)
+  * [Quick start guide](installation/test\_install/README.md)
     * [Install a bank](installation/test\_install/install-a-bank.md)
     * [Query the bank repository](installation/test\_install/query-the-bank-repository.md)
     * [Run a BLAST search](installation/test\_install/run-a-blast-search.md)

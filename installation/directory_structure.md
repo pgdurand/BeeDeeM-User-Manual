@@ -1,16 +1,13 @@
 # Directory structure
 
-The following table gives the directories that will be used by BeeDeeM \(1\):
+Basically, BeeDeeM expects to access two directories for processing banks installation:
 
-| Alias | Description | Default value |
-| :--- | :--- | :--- |
-| _installDir_ | contains binaries, scripts and configuration files | /opt/beedeem |
-| _workingDir_ | contains files created by BeeDeeM at runtime, such as logs and other temporary files | /var/beedeem |
-| _biobaseRootDir_ | contains installed databases | /biobase |
+* a working directory (_workingDir_): to create log files, temporary files, _etc._
+* a bank home directory (_biobaseRootDir_): the place where all banks are installed. Inside that directory, BeeDeeM creates and manages sub-directories... you are invited to avoid editing manually that structure!&#x20;
 
-These directories can be changed during _BeeDeeM_ installation. They can also be updated during the life cycle of the software, as needed.
+Of course, BeeDeeM requires read/write permissions on these two directories.
 
-In the rest of this manual, the alias names shown above will be used to designate the _BeeDeeM_ directories. For example, _${installDir}_ will designate the _BeeDeeM_ system install directory.
+When using the legacy installer, _workingDir_ and _biobaseRootDir_ are set at installation time.
 
-_\(1\) by default we consider an installation made on a Linux system._
+When using either Docker, SIngularity or Conda installation mode, _workingDir_ and _biobaseRootDir_ are set at runtime using KL\_WORKING\_DIR and KL\_mirror\_\_path environment variables, respectively (variable names are case sensitive and there are indeed two underscore characters between "mirror" and "path", this is NOT a typo; more on this later).
 

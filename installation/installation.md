@@ -17,7 +17,7 @@ You can run _BeeDeeM_ within a Docker container, as explained in [this documenta
 
 ## Singularity
 
-You can run _BeeDeeM_ within a Singularity container, as explained in [this documentation](https://github.com/pgdurand/BeeDeeM/blob/master/singularity/beedeem.def).&#x20;
+You can run _BeeDeeM_ within a Singularity container, as explained in [this documentation](https://github.com/pgdurand/BeeDeeM/tree/master/singularity).&#x20;
 
 * _Pros_ of Singularity configuration: direct use.&#x20;
 * _Cons_ of Singularity:&#x20;

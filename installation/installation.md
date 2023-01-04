@@ -48,9 +48,9 @@ Then proceed as follows:
 **-1-** Prepare a temporary directory from which the installation will be performed:
 
 ```
-$ cd /tmp
-$ mkdir dbms
-$ cd dbms
+cd /tmp
+mkdir dbms
+cd dbms
 ```
 
 place the dbmanager-x.y.z-distrib.zip file in the directory /tmp/dbms.
@@ -58,19 +58,19 @@ place the dbmanager-x.y.z-distrib.zip file in the directory /tmp/dbms.
 **-2-** Decompress the file beedeem-x.y.z-distrib.zip:
 
 ```
-$ unzip beedeem-x.y.z-distrib.zip
+unzip beedeem-x.y.z-distrib.zip
 ```
 
 **-3-** Check if _Oracle Java_ and _Apache Ant_ are available on your system:
 
 ```
-$ java -version
-java version "1.8.0_45"
-Java(TM) SE Runtime Environment (build 1.8.0_45-b14)
-Java HotSpot(TM) 64-Bit Server VM (build 25.45-b02, mixed mode)
+java -version
+   java version "1.8.0_45"
+   Java(TM) SE Runtime Environment (build 1.8.0_45-b14)
+   Java HotSpot(TM) 64-Bit Server VM (build 25.45-b02, mixed mode)
 
-$ ant -version
-Apache Ant(TM) version 1.10.3 compiled on March 24 2018
+ant -version
+   Apache Ant(TM) version 1.10.3 compiled on March 24 2018
 ```
 
 If _Java_ and _Ant_ are already installed and available on your system, jump to step 5, below.
@@ -80,9 +80,11 @@ If _Java_ is not available, please proceed to the web site of [Oracle](http://ww
 If _Ant_ is not available on your computer, decompress the _Ant_ system supplied with _BeeDeeM_:
 
 ```
-$ cd ant/bin
-$ chmod a+x ant antRun
-$ cd ../..
+cd ant
+unzip  ant-1.9.4.zip
+cd bin
+chmod a+x ant antRun
+cd ../..
 ```
 
 ### Setup the _BeeDeeM_ configuration
@@ -94,19 +96,20 @@ $ cd ../..
 This information is given in the file **envDBMS** which you should edit and correctly update. If you choose to use the _Ant_ system supplied with _BeeDeeM_ (see step 3, above), do not modify the declaration of the variable ANT\_HOME in the **envDBMS** file:
 
 ```
-$ vi envDBMS     [update file as needed]
+vi envDBMS     [update file as needed]
 
-#  Provide here the path to the home directory of an
-#  Oracle JRE release 1.8 or above
+#  Provide here the path to the home directory of a Ant
+#  1.9 or above. By default, DBMS installer will use its
+#  own Ant.
 #
-JAVA_HOME=/usr/local/jre1.8      <-- UPDATE AT LEAST THIS LINE
+ANT_HOME=$PWD/ant   <-- UPDATE AT LEAST THIS LINE if needeed
 .../...
 ```
 
 After editing, save envDBMS file, then:
 
 ```
-$ source envDBMS
+source envDBMS
 ```
 
 **-5-** Declare your system configuration.
@@ -120,16 +123,17 @@ You have now to define:
 To do that, edit the file **config.properties**. This contains documentation explaining how it should be modified.
 
 ```
-$ vi config.properties [update file as needed]
+vi config.properties [update file as needed]
 
 installDir=/opt/beedeem          <-  Installation directory
 workingDir=/var/beedeem          <-  Working directory
 biobaseRootDir=/biobase          <-  Where to install databases
-javaDir=/usr/java/jre1.6         <-  Home directory of the JRE
 javaArgs=-Xms128M -Xmx1024M      <-  JRE memory settings
 
 (After editing, save config.properties file)
 ```
+
+<mark style="color:red;">**CAUTION**</mark>: have in mind that during installation, directories targeted by `installDir`, `workingDir` and `biobaseRootDir` will be DELETED (only if they exist) then created by the software installer; _e.g._ in the above example, /opt/beedeem and /var/beedeem are deleted then created by BeeDeeM installer.
 
 It is worth noting that all these values can be updated after installation, but in a less easier way. So carefully choose your installation directories by now.
 
@@ -138,15 +142,29 @@ It is worth noting that all these values can be updated after installation, but 
 It is now time to install _BeeDeeM_:
 
 ```
-$ ant -f deploy.xml install
+ant -f deploy.xml install
 ```
 
-On start-up, the _BeeDeeM_ installer will ask you to verify your system configuration.
+On start-up, the _BeeDeeM_ installer will ask you to verify your system configuration:
 
-Do not omit this step: this is the last time you can perform this verification. In the case of an error, you can interrupt the installation with CTRL+C. Otherwise, continue with this procedure.
+`Buildfile: deploy.xml`\
+`install:` \
+&#x20;   `[echo] *** PLEASE VERIFY ***` \
+&#x20;   `[echo]` \
+&#x20;   `[echo]` \
+&#x20;   `[echo] Current configuration is:` \
+&#x20;   `[echo] Installation dir: /opt/beedeem` \
+&#x20;   `[echo] Working dir : /var/beedeem` \
+&#x20;   `[echo] BioBase dir : /biobase` \
+&#x20;   `[echo] Java args : -Xms128M -Xmx4G` \
+&#x20;   `[input] If ok, press Return key to start the installation...`
+
+Do not omit this step: this is the last time you can perform this verification.&#x20;
+
+In the case of an error, you can interrupt the installation with CTRL+C. Otherwise, continue with this procedure.
 
 Carefully check the final message from _Ant._ If everything is correct, you should see the message:
 
 ```
- **BUILD SUCCESSFUL**
+ BUILD SUCCESSFUL
 ```

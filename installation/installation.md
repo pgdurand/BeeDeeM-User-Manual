@@ -4,11 +4,7 @@
 
 BeeDeeM software development started in early February 2007. To provide a multi-OS, open source and free software installer at that time, the [Apache Ant tool ](https://ant.apache.org/)was chosen. This is called the _legacy BeeDeeM installer_.&#x20;
 
-Over time, modern installation procedures were provided relying on Conda, Docker and Singularity.
-
-## Conda
-
-You can install and run BeeDeeM using Anaconda tool as explained in [this documentation](https://anaconda.org/SeBiMER/beedeem). You can benefit from all BeeDeeM features, including the [UiInstaller](../getting-started-1/).&#x20;
+Over time, modern installation procedures were provided relying on Docker, Singularity and Conda. Today, these are the recommanded ways of installing BeeDeeM.
 
 ## Docker
 
@@ -27,9 +23,13 @@ You can run _BeeDeeM_ within a Singularity container, as explained in [this docu
 * _Cons_ of Singularity:&#x20;
   * benefit from all BeeDeeM features, but the [UiInstaller](../getting-started-1/).&#x20;
 
-## Legacy installation: _Antstaller_
+## Conda
 
-You can install the software directly on a computer (or server, or cluster, ...) to benefit from **ALL** its features, including the use of the [UiInstaller](../getting-started-1/). The following section explains how to do that using the Apache Ant installer script (aka _Anstaller_) provided with BeeDeeM.
+You can install and run BeeDeeM using Anaconda tool as explained in [this documentation](https://anaconda.org/SeBiMER/beedeem). You can benefit from all BeeDeeM features, including the [UiInstaller](../getting-started-1/).&#x20;
+
+## Legacy installation
+
+You can install the software directly on a computer (or server, or cluster, ...) to benefit from **ALL** its features, including the use of the [UiInstaller](../getting-started-1/). The following section explains how to do that.
 
 We consider an installation on a Unix-based system (Linux, macOS), but you can easily adapt for Windows OS.
 

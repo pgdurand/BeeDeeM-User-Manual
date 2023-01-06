@@ -43,7 +43,7 @@ _BeeDeeM_ is available on Github [here](https://github.com/pgdurand/BeeDeeM/rele
 
 Then proceed as follows:
 
-**-1-** Prepare a temporary directory from which the installation will be performed:
+**-1- Prepare a temporary directory from which the installation will be performed:**
 
 ```
 cd /tmp
@@ -53,29 +53,26 @@ cd dbms
 
 place the dbmanager-x.y.z-distrib.zip file in the directory /tmp/dbms.
 
-**-2-** Decompress the file beedeem-x.y.z-distrib.zip:
+**-2- Decompress the file beedeem-x.y.z-distrib.zip:**
 
 ```
 unzip beedeem-x.y.z-distrib.zip
 ```
 
-**-3-** Check if _Oracle Java_ and _Apache Ant_ are available on your system:
+**-3- Check if **_**Oracle Java**_** is available on your system:**
 
 ```
 java -version
    java version "1.8.0_45"
    Java(TM) SE Runtime Environment (build 1.8.0_45-b14)
    Java HotSpot(TM) 64-Bit Server VM (build 25.45-b02, mixed mode)
-
-ant -version
-   Apache Ant(TM) version 1.10.3 compiled on March 24 2018
 ```
 
-If _Java_ and _Ant_ are already installed and available on your system, jump to step 5, below.
+If _Java_ is already installed and available on your system, jump to step 4, below.
 
 If _Java_ is not available, please proceed to the web site of [Oracle](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) to install the _Java Runtime Environment_. **DO NOT use OpenJDK, gcj, etc**. _BeeDeeM_ only works well with the original _Oracle Java_.
 
-Decompress the _Ant_ system supplied with _BeeDeeM_:
+**-4- Decompress the **_**Ant**_** system supplied with **_**BeeDeeM**_**:**
 
 ```
 cd ant
@@ -85,9 +82,7 @@ chmod a+x ant antRun
 cd ../..
 ```
 
-### Setup the _BeeDeeM_ configuration
-
-**-4-** Declare your system configuration.
+**-5- Declare your system configuration to install BeeDeeM**
 
 You have now to define:
 
@@ -114,9 +109,7 @@ javaArgs=-Xms128M -Xmx1024M      <-  JRE memory settings
 
 It is worth noting that all these values can be updated after installation, but in a less easier way. So carefully choose your installation directories by now.
 
-### Start the installation
-
-It is now time to install _BeeDeeM_:
+**-6- It is now time to install **_**BeeDeeM using this very simple command**_**:**
 
 ```
 ant -f deploy.xml install
@@ -145,3 +138,19 @@ Carefully check the final message from _Ant._ If everything is correct, you shou
 ```
  BUILD SUCCESSFUL
 ```
+
+**-7- Update PATH variable**
+
+To ensure easy use of BeeDeeM main command (called `bdm`), update PATH variable; e.g. on Linux/macOS:\
+`export PATH=/path/to/beedeem-installation:$PATH`
+
+_Note_: replace '/path/to/beedeem-installation' by the appropriate path you use during YOUR installation (_e.g._ it is /opt/beedeem in our exemple).&#x20;
+
+**-8- Finally, try getting BeeDeeM help from the command line:**
+
+`bdm --help`
+
+Or run a full test:
+
+`test_bdm`
+

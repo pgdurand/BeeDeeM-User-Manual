@@ -1,8 +1,10 @@
 # Requirements
 
-_BeeDeeM_ is a mostly a Java software, so it is available for _Linux_, _MacOS X and Windows_ operating systems.&#x20;
+_BeeDeeM_ is mostly a Java software, so it is available for _Linux_, _MacOS X and Windows_ operating systems.&#x20;
 
-However, BeeDeeM extended task engine to submit jobs on cluster nodes is only available for a Linux OS.
+However, since release 4.5, BeeDeeM task engine relies on additional bash shell scripts, making the software capable of running only on Unix-based operating systems (Linux and macOS). Windows users are now invited to run BeeDeeM from the Windows Linux Subsystem.
+
+Finally, BeeDeeM cluster task engine, enabling the software to distribute jobs on computing nodes, is only available for a Linux OS.
 
 ## Software
 

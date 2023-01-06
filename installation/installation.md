@@ -29,9 +29,7 @@ Finally, you can install and run BeeDeeM using Anaconda tool as explained in [th
 
 ## Legacy installation
 
-While not anymore recommanded, you can still install the software directly on your own computer (or server, or cluster, ...) to benefit from **ALL** its features, including the use of the [UiInstaller](../getting-started-1/). The following section explains how to do that.
-
-The _BeeDeeM_ install procedure has to be executed by a system administrator.
+You can install the software directly on a computer (or server, or cluster, ...) to benefit from **ALL** its features, including the use of the [UiInstaller](../getting-started-1/). The following section explains how to do that.
 
 It only requires the file **beedeem-x.y.z-distrib.zip** (where x.y.z is a version number) which contains the entire _BeeDeeM_ system.
 
@@ -77,7 +75,7 @@ If _Java_ and _Ant_ are already installed and available on your system, jump to 
 
 If _Java_ is not available, please proceed to the web site of [Oracle](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) to install the _Java Runtime Environment_. **DO NOT use OpenJDK, gcj, etc**. _BeeDeeM_ only works well with the original _Oracle Java_.
 
-If _Ant_ is not available on your computer, decompress the _Ant_ system supplied with _BeeDeeM_:
+Decompress the _Ant_ system supplied with _BeeDeeM_:
 
 ```
 cd ant
@@ -89,35 +87,14 @@ cd ../..
 
 ### Setup the _BeeDeeM_ configuration
 
-**-4-** Prepare some environment variables to tell the _BeeDeeM_ installer where to find _Ant_ and the _Java Runtime_.
-
-**Note**: if _Java_ and _Ant_ are already installed and available on your system, jump to step 5.
-
-This information is given in the file **envDBMS** which you should edit and correctly update. If you choose to use the _Ant_ system supplied with _BeeDeeM_ (see step 3, above), do not modify the declaration of the variable ANT\_HOME in the **envDBMS** file:
-
-```
-vi envDBMS     [update file as needed]
-
-#  Provide here the path to the home directory of a Ant
-#  1.9 or above. By default, DBMS installer will use its
-#  own Ant.
-#
-ANT_HOME=$PWD/ant   <-- UPDATE AT LEAST THIS LINE if needeed
-.../...
-```
-
-After editing, save envDBMS file, then:
-
-```
-source envDBMS
-```
-
-**-5-** Declare your system configuration.
+**-4-** Declare your system configuration.
 
 You have now to define:
 
-* the directories used by the _BeeDeeM_ installer to correctly deploy it on your system (_c.f._ [Directory structure](directory\_structure.md)),
-* the _JRE_ home directory,
+* the directories used by the _BeeDeeM_ installer to correctly deploy it on your system (_c.f._ [Directory structure](directory\_structure.md)):&#x20;
+  * installation directory: where BeeDeeM will be deployed,&#x20;
+  * working directory: where BeeDeeM can create temporary files,
+  * bank installation directory: where BeeDeeM will install banks;
 * the memory parameters to use with _JRE_.
 
 To do that, edit the file **config.properties**. This contains documentation explaining how it should be modified.
@@ -133,7 +110,7 @@ javaArgs=-Xms128M -Xmx1024M      <-  JRE memory settings
 (After editing, save config.properties file)
 ```
 
-<mark style="color:red;">**CAUTION**</mark>: have in mind that during installation, directories targeted by `installDir`, `workingDir` and `biobaseRootDir` will be DELETED (only if they exist) then created by the software installer; _e.g._ in the above example, /opt/beedeem and /var/beedeem are deleted then created by BeeDeeM installer.
+<mark style="color:red;">**CAUTION**</mark>: have in mind that during installation, directories targeted by `installDir`will be DELETED (only if they exist) then created by the software installer; _e.g._ in the above example, /opt/beedeem is deleted then created again by BeeDeeM installer.
 
 It is worth noting that all these values can be updated after installation, but in a less easier way. So carefully choose your installation directories by now.
 

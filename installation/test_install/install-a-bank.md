@@ -3,7 +3,7 @@
 You can run a bank installation from the command-line as follows:
 
 ```
-install.sh -desc SwissProt_human
+bdm install -desc SwissProt_human
 
 where - 'SwissProt_human' is the name of the bank descriptor to use to start
         bank installation (more on this later)
@@ -14,14 +14,14 @@ _Note_: during script execution, there is nothing displayed on the terminal whet
 Once execution finishes, check the contents of the _BeeDeeM_ log file.
 
 ```
-$ cat ${workingDir}/SwissProt_human.log | grep WARN
+$ cat ${workingDir}/dbms-SwissProt_human.log | grep WARN
 
 where ${workingDir} should be replaced by the working directory of BeeDeeM
 ```
 
 If there are some WARN lines in the logs, then refer to the section [Appendix – Common errors](../../getting-started/common-errors.md).
 
-Otherwise, it means the PDB Proteins bank (NCBI BLAST format) is now installed on your system.
+Otherwise, it means the SwissProt\_human bank (Uniprot annotated formatand BLAST formated bank) is now installed on your system.
 
 ### Common descriptors
 
@@ -32,6 +32,12 @@ In our above example:
 `install.sh -desc` SwissProt\_human
 
 implies that you have the file 'SwissProt\_human.dsc' within 'conf/descriptors' folder of BeeDeeM.
+
+You can get an overview all all available bank descriptors using:
+
+`bdm desc -l`
+
+Bank descriptors are fully described in a separate [section](../../getting-started/using-descriptors.md).&#x20;
 
 ### Install more databanks
 

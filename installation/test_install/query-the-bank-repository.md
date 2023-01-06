@@ -5,13 +5,13 @@
 At any time, you can list installed banks as follows:
 
 ```
-info.sh
+bdm info -d all -f txt
 ```
 
 Which gives you on the standard output:
 
 ```
-BeeDeeM - 4.1.0
+BeeDeeM - 5.5.0
 
 Configuration:
 
@@ -40,20 +40,12 @@ Installed banks
 
 ### Query the BeeDeeM bank repository
 
-You can also use [Utility tools](../../utils/) available with _BeeDeem_.
-
-For instance, one of these tools is '[query](../../utils/cmdline-query.md)' which enables to query _BeeDeeM_ bank repository using sequence IDs. If you have succesfully installed _Human subdivision of Uniprot\_Swissprot_, as explained above, you can try this:
+All banks installed by BeeDeeM can be searched for by entry ID using the bdm query command, such as:
 
 ```
-query.sh -d protein -i 1433S_HUMAN -f txt
+bdm query -d protein -i 1433S_HUMAN -f fas
 ```
 
-```
-Well, we hope that '1433S\_HUMAN' is still available in the Human Swissprot bank... if true, you'll see the full entry !
-```
-
-_Note_: during script execution, there is nothing displayed on the terminal whether something goes wrong. However, _BeeDeeM_ logs all its work in a dedicated log file located in _${workingDir}_.
-
-Available formats in 'query.sh' command-line are: _txt_, _html_, _fas_, _insd_ and _finsd_.
+Available formats for `bdm query` command-line are: _txt_, _html_, _fas_, _insd_ and _finsd_.
 
 [Read more about query tool](../../utils/cmdline-query.md).

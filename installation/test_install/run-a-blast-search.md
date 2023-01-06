@@ -8,9 +8,9 @@ So, you can easily run BLAST jobs, as illustrated by this command-line snippet:
 
 ```
 # We get a query sequence from BeeDeeM repository
-$ query.sh -d protein -i 1433S_HUMAN -f fas > 1433S_HUMAN.fas
+$ bdm query -d protein -i 1433S_HUMAN -f fas > 1433S_HUMAN.fas
 
-# We "BLASTp" that query against the installed Human subdivision of Uniprot_Swissprot
+# We "BLASTp" that query against the installed Human sub-division of Uniprot_Swissprot
 $ blastp -db /biobase/p/SwissProt_human/current/SwissProt_human/SwissProt_humanM \
          -query 1433S_HUMAN.fas -outfmt 5 -out 1433S_HUMAN.blastp
 ```

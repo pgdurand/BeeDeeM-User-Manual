@@ -9,7 +9,7 @@ Only if the target databank contains features. A simple FASTA file does not cont
 Ok, try this on the command-line:
 
 ```
-query.sh -d protein -i 1433S_HUMAN -f txt
+bdm query -d protein -i 1433S_HUMAN -f txt
 ```
 
 Among the many types of information, that Swissprot entry contains:
@@ -38,7 +38,7 @@ These are: taxonomy ID (OX line), GeneOntology and InterPro ontology IDs (DR lin
 Now, you can annotate a BLAST result as follows (we resume the above example where we produce the BLAST file: 1433S\_HUMAN.blastp):
 
 ```
-annotate.sh -i 1433S_HUMAN.blastp -o 1433S_HUMAN.zml -type full -writer zml
+bdm annot -i 1433S_HUMAN.blastp -o 1433S_HUMAN.zml -type full -writer zml
 ```
 
 _Note_: during script execution, there is nothing displayed on the terminal whether something goes wrong. However, _BeeDeeM_ logs all its work in a dedicated log file located in _${workingDir}_.

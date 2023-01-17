@@ -14,7 +14,7 @@
   * [BeeDeeM configuration](getting-started/beedeem-configuration.md)
   * [Databank descriptors](getting-started/using-descriptors.md)
   * [Install databanks](getting-started/install-banks.md)
-  * [Databanks organization](getting-started/banks-organization.md)
+  * [Databanks management](getting-started/banks-organization.md)
   * [Descriptors format](getting-started/descriptors-format.md)
   * [Advanced uses](getting-started/advanced-uses.md)
   * [Filter sequences](getting-started/filtering-sequences.md)

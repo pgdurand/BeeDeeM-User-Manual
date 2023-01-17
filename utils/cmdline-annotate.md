@@ -4,8 +4,7 @@ _BeeDeeM_ comes with an additional tool aims at annotating BLAST results. This a
 
 That tool is only available from the command line and is called:
 
-* annotate.sh: to be used on Linux or Mac OSX system
-* annotate.bat: to be used on Windows system
+* bdm annot -h
 
 _Note:_ during script execution, there is nothing displayed on the terminal whether something goes OK or wrong. However, _BeeDeeM_ logs all its work in a dedicated log file located in ${workingDir}. Refer to [Directory structure](../installation/directory\_structure.md) for more information.
 
@@ -55,7 +54,7 @@ For those of you that are still using the legacy BLAST (_i.e. blastall_), use th
 Command line takes three arguments, in this order:
 
 ```
-annotate.sh -i <BLAST result> -o <output file> -type <type> -writer <writer>
+bdm annot -i <BLAST result> -o <output file> -type <type> -writer <writer>
 ```
 
 * **BLAST result** \[_required_]: input BLAST file that has to be annotated (absolute path); must be legacy BLAST XML formatted;&#x20;
@@ -63,15 +62,9 @@ annotate.sh -i <BLAST result> -o <output file> -type <type> -writer <writer>
 * **type** \[_required_]: type of annotation to retrieve. Use one of: bco or full. Use "bco" to only retrieve biological classifications information. Use "full" to retrieve full feature tables.
 * **writer** \[_required_]: writing format. Use one of: xml or zml. Use zml to save feactures and classification data. Use xml to save using NCBI legacy XML format.
 
-Run program "annotate.sh" without any arguments to review command-line usage.
+Run program "bdm annot -h" to review command-line usage.
 
 [Sample use case](../installation/test\_install/#annotate-a-blast-result).
-
-In addition, some parameters can be passed to the JVM for special configuration purposes:
-
-* \-DKL\_DEBUG=true ; if true, log will be in debug mode
-* \-DKL\_WORKING\_DIR=an\_absolute\_path ; if not set, log and working directories are set to java.io.tmp
-* \-DKL\_LOG\_FILE=a\_file\_name ; if set, creates a log file with that name within KL\_WORKING\_DIR
 
 ## Output format
 

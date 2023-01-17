@@ -1,36 +1,27 @@
-# Use BeeDeeM from the command-line
+# BeeDeeM reference manual
 
-## Command to use
+## BeeDeeM master command
 
-The command to start _BeeDeeM_ is:
+Running BeeDeeM is as simple as using the unique command: `bdm`.
 
-```text
-$ install.sh <descriptor>   [Linux, MacOSX]
-c:\> install.bat <descriptor>  [Windows]
-```
+You get help with: `bdm -h` or `bdm --help`.
 
-_Note:_ during script execution, there is nothing displayed on the terminal whether something goes OK or wrong. However, _BeeDeeM_ logs all its work in a dedicated log file located in ${workingDir}. Refer to [Directory structure](../installation/directory_structure.md) for more information.
+Expected first argument of bdm command is one of the following sub-commands (also called BeeDeeM tools):
 
-## _BeeDeeM_ installation directory
+| sub-command | description                                                                                   |
+| ----------- | --------------------------------------------------------------------------------------------- |
+| annot       | annotate a BLAST XML formatted file                                                           |
+| check       | check whether or not a descriptor is still ok (URL not broken, etc)                           |
+| delete      | delete bank(s)                                                                                |
+| desc        | get list of bank descriptors from default conf directory, i.e. ${installDir}/conf/descriptors |
+| info        | print out list of installed banks                                                             |
+| install     | install bank(s)                                                                               |
+| query       | query bank repository to fetch entry(ies) given ID(s)                                         |
+| ui          | start bank manager graphical user interface                                                   |
 
-We suppose we work on a Unix-base system in the rest of the manual. Windows users can easily adapt to their OS.
+You can easily get an overview of all these tools using such a command:
 
-The _BeeDeeM_ directory _${installDir}_ is organised as follows \(Linux/OSX defaults\):
+* `bdm -h`: display available list of tools along with a short description
+* `bdm install -h`: display usage of tool `install`
 
-| Directory | Contents | Default value |
-| :--- | :--- | :--- |
-| _${installDir}_ | Home directory of _BeeDeeM_ | /opt/beedeem |
-| _${installDir}/bin_ | Java libraries for _BeeDeeM_ and its dependencies | /opt/beedeem/bin |
-| _${installDir}/external_ | Native binaries \(such as makeblastdb\) for Linux, MacOSX or Windows | /opt/beedeem/external |
-| _${installDir}/conf_ | _BeeDeeM_ configuration files and databank descriptors | /opt/beedeem/conf |
-
-## _BeeDeeM_ databanks repository
-
-_BeeDeeM_ stores all the databanks under its supervision within a dedicated directory: _${biobaseRootDir}_. This directory is defined during the installation of _BeeDeeM_. Please refer to [Directory structure](../installation/directory_structure.md).
-
-## Configuration directory used during databank installation
-
-_BeeDeeM_ relies on a dedicated directory containing particular files called: **databank descriptor files**. These files instruct the software how to install databanks and they are located in _${installDir}/conf_, as stated above.
-
-This configuration directory will be called _${conf}_ in the following sections.
-
+_Note:_ during BeeDeeM execution, there is nothing displayed on the terminal whether something goes OK or wrong. However, _BeeDeeM_ logs all its work in a dedicated log file located in ${workingDir}.&#x20;

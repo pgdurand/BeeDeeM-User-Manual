@@ -20,7 +20,7 @@ Expected first argument of bdm command is one of the following sub-commands (als
 
 | sub-command | description                                                                                   |
 | ----------- | --------------------------------------------------------------------------------------------- |
-| annotate    | annotate a BLAST XML formatted file                                                           |
+| annot       | annotate a BLAST XML formatted file                                                           |
 | check       | check whether or not a descriptor is still ok (URL not broken, etc)                           |
 | delete      | delete bank(s)                                                                                |
 | desc        | get list of bank descriptors from default conf directory, i.e. ${installDir}/conf/descriptors |

@@ -50,7 +50,7 @@ bdm install -desc Uniprot_SwissProt -task download
       
 ```
 
-*
+You can control `bdm install` tool with some environment variables as stated [in this section](beedeem-configuration.md).&#x20;
 
 ## Starting a deferred process
 

@@ -62,6 +62,8 @@ where:
 * "type-of-repository" is one of: n, p, b, all. This allows you to list nucleotide, protein, biological calssifications or all banks, respectively. Default is: all.
 * "format" is one of: txt, html, galaxy. Default is: txt.
 
+You can control `bdm info` tool with some environment variables as stated [in this section](../getting-started/beedeem-configuration.md).&#x20;
+
 ## Locate your BLAST banks
 
 Using that utility tool, you can easily identify banks that are available for BLAST. If you have a closer look at the above bank list, you will see this line:

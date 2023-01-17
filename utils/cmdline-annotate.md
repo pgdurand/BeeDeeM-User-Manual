@@ -66,6 +66,8 @@ Run program "bdm annot -h" to review command-line usage.
 
 [Sample use case](../installation/test\_install/#annotate-a-blast-result).
 
+You can control `bdm annot` tool with some environment variables as stated [in this section](../getting-started/beedeem-configuration.md).&#x20;
+
 ## Output format
 
 This program produces an output file using a dedicated format that can represent a BLAST results containing Feature Tables (original BLAST XML format does not handle that).

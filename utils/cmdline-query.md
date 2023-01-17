@@ -22,3 +22,5 @@ and the result is directly dumped in standard output.
 * **output** \[optional]: output file to save results of query. Optional, default is stdout.
 
 [Sample use case](../installation/test\_install/query-the-bank-repository.md).
+
+You can control `bdm query` tool with some environment variables as stated [in this section](../getting-started/beedeem-configuration.md).&#x20;

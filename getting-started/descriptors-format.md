@@ -61,7 +61,9 @@ local.rdir.exclude=
 
 that simply define the directories to include or exclude to locate files on your local file system. Accepted values are comma-separated list of directories; regular expressions are accepted.
 
-Carefully use “|” character between each part of the path; i.e. do not use Unix path separator (/), nor the Windows one ().
+Carefully use “|” character between each part of the path; i.e. do not use Unix path separator (/), nor the Windows one (\\).
+
+`local.rdir` declaration accepts environment variables, e.g. $HOME, ${SCRATCH}, _etc_.
 
 ## Unit tasks
 
@@ -171,7 +173,7 @@ mail.smtp.recipient.mail=
 
 **(2)** The main task to execute. Must be one of the two following keys: 'info' or 'download'. Use 'info' to just retrieve the list of files to download/process. Use 'download' to actually donwload/process files. When using 'info', the list of files (along with their size) is dumpped in the log file of the software.
 
-**(3)** Resume a previously aborted process. To do that, replace 'none' by the process date using the format yyyymmdd (ex: 20221027). See [Restart after failure](advanced-uses.md#restart-after-failure) for more information.
+**(3)** Deprecated.
 
 **(4)** Delay (ms) between two consecutive task executions. Please follow recommendations of databank providers (_e.g._ NCBI, EBI).
 

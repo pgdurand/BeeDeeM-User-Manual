@@ -83,3 +83,17 @@ Annotated bank: true
 ```
 
 Which means that the "SwissProt\_human" contains annotations: features and biological classifications. So, that bank can be used with the [Annotate tool](cmdline-annotate.md).
+
+## Get loc files for Galaxy
+
+You can easily enable Galaxy web platform to use banks installed by BeeDeeM by creating loc files as follows:
+
+```
+# dump nucleotide banks into appropriate loc file
+bdm info -f galaxy -d n > blastdb_n.loc
+
+# do the same for protein banks
+bdm info -f galaxy -d p > blastdb_p.loc
+```
+
+Such files contains list of banks ready to be used by NCBI BLAST Galaxy wrappers.

@@ -53,10 +53,12 @@ Among others, these databanks can be used to:
 
 _BeeDeeM_ features and data are accessible from:
 
-* [BioDocument Viewer](https://github.com/pgdurand/BioDocumentViewer)
 * [BLAST Viewer](https://github.com/pgdurand/BlastViewer)
+* [BioDocument Viewer](https://github.com/pgdurand/BioDocumentViewer)
 * [BLAST Filter Tool](https://github.com/pgdurand/BLAST-Filter-Tool)
 * [Plealog Bioinformatics Core API](https://github.com/pgdurand/Bioinformatics-Core-API)
+
+It is worth noting that BeeDeeM is capable of [creating Galaxy Data Manager loc files](utils/list-banks.md), enabling a Galaxy web portal to use banks installed by BeeBeeM.
 
 ## More about some features
 
@@ -84,6 +86,6 @@ Finally, concerning public sequence databanks, BeeDeeM is capable of running in 
 
 ## License
 
-_**BeeDeeM**_** is a free open-source software** released under the terms of:
+_BeeDeeM_ is a free open-source software released under the terms of:
 
 [![License AGPL](https://img.shields.io/badge/license-Affero%20GPL%203.0-blue.svg)](https://www.gnu.org/licenses/agpl-3.0.txt)
